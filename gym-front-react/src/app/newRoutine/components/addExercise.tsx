@@ -6,9 +6,7 @@ import { Button, Menu, MenuItem } from "@mui/material";
 export default function AddExercise({
     onSelect
 }: {
-    onSelect: [{
-        exerciseId: number;
-    }]
+    onSelect: [{}]
 }) {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const { data, isLoading, error, fatchData } = useExercisesStore()
@@ -52,7 +50,8 @@ export default function AddExercise({
                     <MenuItem
                         key={`exercise${item.id}`}
                         onClick={() => {
-                            onSelect.push({ exerciseId: item.id })
+                            onSelect.push(item);
+                            console.log('Selected exercise:', item);
                             handleClose();
                         }}
                         value={item.id}

@@ -13,6 +13,6 @@ namespace gymApi.Models
         public string Category { get; set; } = string.Empty;
         public string Equipment { get; set; } = string.Empty;
         public string TargetMuscle { get; set; } = string.Empty;
-        public string? ImageUrl { get; set; } = string.Empty;
+        public string ImageUrl { get; set; } = string.Empty;
     }
 }

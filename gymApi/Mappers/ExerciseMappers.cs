@@ -20,7 +20,8 @@ namespace gymApi.Mappers
                 Description = exerciseModel.Description,
                 Category = exerciseModel.Category,
                 Equipment = exerciseModel.Equipment,
-                TargetMuscle = exerciseModel.TargetMuscle
+                TargetMuscle = exerciseModel.TargetMuscle,
+                ImageUrl = exerciseModel.ImageUrl
             };
         }
         public static Exercise ToExerciseFromCreateDto(this CreateExerciseRequestDto exerciseModel)
